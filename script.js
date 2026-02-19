@@ -45,13 +45,15 @@ function displayDoctors() {
         return;
     }
     
-    list.innerHTML = doctors.map(d => `
-        <div class="doctor-card">
+    list.innerHTML = doctors.map(d => {
+        const isFull = d.currentAppointments >= d.maxDailyPatients;
+        return `
+        <div class="doctor-card ${isFull ? 'full' : ''}">
             <h3>Dr. ${d.doctorId}</h3>
             <p><strong>Specialization:</strong> ${d.specialization}</p>
             <p><strong>Appointments:</strong> ${d.currentAppointments} / ${d.maxDailyPatients}</p>
         </div>
-    `).join('');
+    `}).join('');
 }
 
 function showOutput(message, isSuccess) {
