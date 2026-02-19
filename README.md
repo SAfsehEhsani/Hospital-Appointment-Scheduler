@@ -2,7 +2,7 @@
 Develop and deploy a working application that schedules doctor appointments fairly and efficiently
 
 ## Live Demo
-🔗 [Deployment URL will be added here]
+🔗 [https://hospital-appointment-scheduler-gilt.vercel.app?_vercel_share=J6mvhwuOduzNMU8M4T7It7zpE6ROFiqg]
 
 ## Features
 - ✅ Add Doctor with ID, specialization, and max daily patients
