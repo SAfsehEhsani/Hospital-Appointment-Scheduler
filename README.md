@@ -31,12 +31,6 @@ Develop and deploy a working application that schedules doctor appointments fair
 
 ## Deployment Instructions
 
-### Deploy to Netlify
-1. Push code to GitHub
-2. Go to [Netlify](https://netlify.com)
-3. Click "Add new site" → "Import an existing project"
-4. Select your GitHub repository
-5. Deploy (no build command needed)
 
 ### Deploy to Vercel
 1. Push code to GitHub
@@ -92,7 +86,7 @@ Hospital-Appointment-Scheduler/
 ```
 
 ## Author
-[Your Name]
+Syed Afseh Ehsani
 
 ## License
-MIT
+Personal MIT 
