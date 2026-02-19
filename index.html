@@ -8,12 +8,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Hospital Appointment Scheduler</h1>
+        <div class="header">
+            <h1>🏥 <span id="hospitalName">City General Hospital</span></h1>
+            <button id="editHospital" class="edit-btn">Edit Hospital Name</button>
+        </div>
         
         <div class="section">
             <h2>Add Doctor</h2>
             <form id="addDoctorForm">
-                <input type="text" id="doctorId" placeholder="Doctor ID" required>
+                <input type="text" id="doctorId" placeholder="Doctor ID (e.g., D001)" required>
+                <input type="text" id="doctorName" placeholder="Doctor Name" required>
                 <input type="text" id="specialization" placeholder="Specialization" required>
                 <input type="number" id="maxDailyPatients" placeholder="Max Daily Patients" min="1" required>
                 <button type="submit">Add Doctor</button>
@@ -23,6 +27,7 @@
         <div class="section">
             <h2>Book Appointment</h2>
             <form id="bookAppointmentForm">
+                <input type="text" id="patientName" placeholder="Patient Name" required>
                 <input type="text" id="bookSpecialization" placeholder="Specialization" required>
                 <button type="submit">Book Appointment</button>
             </form>
