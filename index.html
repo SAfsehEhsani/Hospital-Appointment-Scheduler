@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Appointment Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital Appointment Scheduler</h1>
+        
+        <div class="section">
+            <h2>Add Doctor</h2>
+            <form id="addDoctorForm">
+                <input type="text" id="doctorId" placeholder="Doctor ID" required>
+                <input type="text" id="specialization" placeholder="Specialization" required>
+                <input type="number" id="maxDailyPatients" placeholder="Max Daily Patients" min="1" required>
+                <button type="submit">Add Doctor</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Book Appointment</h2>
+            <form id="bookAppointmentForm">
+                <input type="text" id="bookSpecialization" placeholder="Specialization" required>
+                <button type="submit">Book Appointment</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Doctors List</h2>
+            <div id="doctorsList"></div>
+        </div>
+
+        <div class="section">
+            <h2>Output</h2>
+            <div id="output"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
