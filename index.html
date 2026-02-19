@@ -22,37 +22,75 @@
     
     <div class="container">
         <div class="header">
-            <h1>🏥 <span id="hospitalName">City General Hospital</span></h1>
-            <button id="editHospital" class="edit-btn">Edit Hospital Name</button>
+            <div class="hospital-badge">
+                <div class="badge-icon">🏥</div>
+                <div class="badge-content">
+                    <h1 id="hospitalName">City General Hospital</h1>
+                    <p class="tagline">Your Health, Our Priority</p>
+                </div>
+            </div>
+            <button id="editHospital" class="edit-btn">✏️ Edit Hospital</button>
         </div>
         
-        <div class="section">
-            <h2>Add Doctor</h2>
-            <form id="addDoctorForm">
-                <input type="text" id="doctorId" placeholder="Doctor ID (e.g., D001)" required>
-                <input type="text" id="doctorName" placeholder="Doctor Name" required>
-                <input type="text" id="specialization" placeholder="Specialization" required>
-                <input type="number" id="maxDailyPatients" placeholder="Max Daily Patients" min="1" required>
-                <button type="submit">Add Doctor</button>
-            </form>
+        <div class="grid-layout">
+            <div class="section card-elevated">
+                <div class="section-header">
+                    <span class="icon">👨‍⚕️</span>
+                    <h2>Add Doctor</h2>
+                </div>
+                <form id="addDoctorForm">
+                    <div class="input-group">
+                        <label>👤 Doctor ID</label>
+                        <input type="text" id="doctorId" placeholder="e.g., D001" required>
+                    </div>
+                    <div class="input-group">
+                        <label>📝 Doctor Name</label>
+                        <input type="text" id="doctorName" placeholder="Dr. John Smith" required>
+                    </div>
+                    <div class="input-group">
+                        <label>🩺 Specialization</label>
+                        <input type="text" id="specialization" placeholder="Cardiology" required>
+                    </div>
+                    <div class="input-group">
+                        <label>📊 Max Daily Patients</label>
+                        <input type="number" id="maxDailyPatients" placeholder="10" min="1" required>
+                    </div>
+                    <button type="submit" class="btn-primary">➕ Add Doctor</button>
+                </form>
+            </div>
+
+            <div class="section card-elevated">
+                <div class="section-header">
+                    <span class="icon">📅</span>
+                    <h2>Book Appointment</h2>
+                </div>
+                <form id="bookAppointmentForm">
+                    <div class="input-group">
+                        <label>👤 Patient Name</label>
+                        <input type="text" id="patientName" placeholder="John Doe" required>
+                    </div>
+                    <div class="input-group">
+                        <label>🩺 Specialization</label>
+                        <input type="text" id="bookSpecialization" placeholder="Cardiology" required>
+                    </div>
+                    <button type="submit" class="btn-success">✅ Book Appointment</button>
+                </form>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Book Appointment</h2>
-            <form id="bookAppointmentForm">
-                <input type="text" id="patientName" placeholder="Patient Name" required>
-                <input type="text" id="bookSpecialization" placeholder="Specialization" required>
-                <button type="submit">Book Appointment</button>
-            </form>
-        </div>
-
-        <div class="section">
-            <h2>Doctors List</h2>
+        <div class="section card-elevated">
+            <div class="section-header">
+                <span class="icon">👨‍⚕️</span>
+                <h2>Available Doctors</h2>
+            </div>
             <div id="doctorsList"></div>
         </div>
 
-        <div class="section">
-            <h2>Output</h2>
+        <div class="section card-elevated output-section">
+            <div class="section-header">
+                <span class="icon">📋</span>
+                <h2>Status</h2>
+            </div>
             <div id="output"></div>
         </div>
     </div>
